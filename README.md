@@ -33,11 +33,14 @@ It wrote the code, ran away, and now the game is unplayable.
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. **Launch the app.** Run `python -m streamlit run app.py` and open the page in your browser. You'll see the "🎮 Game Glitch Investigator" title and a "Make a guess" section.
+2. **Pick a difficulty.** In the sidebar, choose Easy (1–20), Normal (1–100), or Hard (1–50). The sidebar shows the current range and how many attempts you're allowed.
+3. **Peek at the secret (optional).** Expand "Developer Debug Info" to see the secret number, your attempt count, and score — handy for confirming the game now behaves correctly.
+4. **Enter a guess.** Type a number in the "Enter your guess:" box and click "Submit Guess 🚀".
+5. **Read the hint.** With "Show hint" checked, the game tells you "📈 Go HIGHER!" or "📉 Go LOWER!" — and these are now correct on every attempt, including even-numbered ones (the string/number comparison bug is fixed).
+6. **Keep guessing.** Follow the hints toward the secret. Your attempts-left counter ticks down and your score updates after each guess.
+7. **Win the game.** Guess the secret exactly and the game shows balloons 🎉, reveals the secret, and displays your final score. The secret stays fixed across submissions (no more resetting on every click).
+8. **Start over.** Click "New Game 🔁" to reset the secret, attempts, and board for another round.
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 

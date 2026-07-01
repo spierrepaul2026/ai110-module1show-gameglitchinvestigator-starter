@@ -18,7 +18,17 @@ def check_guess(guess, secret):
 
     outcome examples: "Win", "Too High", "Too Low"
     """
-    raise NotImplementedError("Refactor this function from app.py into logic_utils.py")
+    # Coerce both to int so the comparison is always numeric. This fixes the
+    # high/low bug: when the secret arrives as a string, comparing directly
+    # would fall back to string comparison and report the wrong direction.
+    guess = int(guess)
+    secret = int(secret)
+
+    if guess == secret:
+        return "Win", "🎉 Correct!"
+    if guess > secret:
+        return "Too High", "📈 Go HIGHER!"
+    return "Too Low", "📉 Go LOWER!"
 
 
 def update_score(current_score: int, outcome: str, attempt_number: int):
